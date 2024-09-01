@@ -8,9 +8,11 @@ import Tools from "../components/Tools";
 import Dealer from "../components/Dealers";
 import VehicleReport from "../components/VehicleReports";
 import LandingPage from "./landing-page";
+import Login from "./Login/Login";
+import Signup from "./Signup/Signup";
+import ProtectedRoute from "../components/layout/protected-route";
 
 export const routes = {
-  search: "/dashboard/search",
   myReports: "/dashboard/my-reports",
   savedCars: "/dashboard/saved-cars",
   decode: "/dashboard/decode",
@@ -19,22 +21,35 @@ export const routes = {
   search: "/dashboard/search",
   vehicleReport: "/dashboard/vehicle-report",
   landingPage: "/",
+  signup: '/signup',
+  login: '/login'
 };
 
 const DasboardRoutes = () => {
+  const token = localStorage.getItem("TOKEN");
   return (
     <Routes>
-      <Route path={routes.search} element={<Search />} />
-      <Route path={routes.myReports} element={<MyReports />} />
-      <Route path={routes.savedCars} element={<SavedCars />} />
-      <Route path={routes.decode} element={<Decode />} />
-      <Route path={routes.tools} element={<Tools />} />
-      <Route path={routes.dealers} element={<Dealer />} />
-      <Route path={routes.vehicleReport} element={<VehicleReport />} />
+      {!token ?
+        <>
+          <Route path={routes.login} element={<Login />} />
+          <Route path={routes.signup} element={<Signup />} />
+        </>
+        :
+        <>
+          <Route path={routes.search} element={<ProtectedRoute><Search /> </ProtectedRoute>} />
+          <Route path={routes.myReports} element={<ProtectedRoute><MyReports /> </ProtectedRoute>} />
+          <Route path={routes.savedCars} element={<ProtectedRoute><SavedCars /> </ProtectedRoute>} />
+          <Route path={routes.decode} element={<ProtectedRoute><Decode /> </ProtectedRoute>} />
+          <Route path={routes.tools} element={<ProtectedRoute><Tools /> </ProtectedRoute>} />
+          <Route path={routes.dealers} element={<ProtectedRoute><Dealer /> </ProtectedRoute>} />
+          <Route path={routes.vehicleReport} element={<ProtectedRoute><VehicleReport /> </ProtectedRoute>} />
 
-      <Route path={routes.landingPage} element={<LandingPage />} />
-
-      <Route path="*" element={<Navigate to={routes.landingPage} />} />
+          <Route path={routes.landingPage} element={<ProtectedRoute><LandingPage /> </ProtectedRoute>} /></>
+      }
+      <Route
+        path="*"
+        element={<Navigate to={token ? routes.search : routes.login} />}
+      />
     </Routes>
   );
 };

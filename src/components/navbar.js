@@ -1,13 +1,14 @@
+import { Button, message } from "antd";
 import React from "react";
-import {Button, Navbar } from "react-bootstrap";
-
+import { Navbar } from "react-bootstrap";
 
 function AppNavbar() {
   const token = localStorage.getItem("TOKEN");
 
   const handleLogout = () => {
     localStorage.removeItem("TOKEN");
-    window.location.href = "http://localhost:3001";
+    message.success('Logged Out Successfully.')
+    window.location.href = "http://localhost:3000/login";
   };
 
   return (
@@ -24,14 +25,13 @@ function AppNavbar() {
           display: "flex",
           justifyContent: "flex-end",
         }}
-      >
-
-        <div>.</div>
-        <span>.</span>
-        
+      >        
+        {token && (
           <Button style={{ margin: "0px 20px" }}  onClick={handleLogout} >
-            Logout
-          </Button>
+          Logout
+        </Button>
+        )}
+          
         
       </div>
     </Navbar>
