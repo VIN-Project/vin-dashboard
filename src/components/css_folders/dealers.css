@@ -1,0 +1,196 @@
+#dealers-page{
+    background-color: #e5e7eb;
+    max-height: 100%;
+    width: calc(100% - 15.7em);
+    padding: 0em 3em;
+    transform: translate(15.7em, 4em);
+    font-family: 'circular';
+}
+
+
+
+/* css_folders/register.css */
+
+/* css_folders/dealers.css */
+
+.deal-register-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f8f9fc;
+    font-family: 'Arial', sans-serif;
+}
+  
+.deal-register-left {
+    width: 50%;
+}
+  
+.deal-register-left h1 {
+    font-size: 36px;
+    color: #1a202c;
+    margin-bottom: -0.5rem;
+}
+  
+.deal-register-left h2 {
+    font-size: 56px;
+    color: #143d80;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+   
+}
+  
+.deal-register-left .deal-subheading {
+    color: #143d80;
+    font-weight: 600;
+    margin-bottom: 0.50em;
+    font-size: 21px;
+
+}
+  
+.deal-register-left h3 {
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-align: left;
+    font-size: 48px;
+}
+  
+.deal-register-left h4 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 1rem;
+}
+  
+.deal-register-left ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.deal-register-left ul li {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+  
+.deal-checkmark {
+    color: #054261;
+    margin-right: 10px;
+}
+  
+.deal-register-right {
+    width: 40%;
+}
+  
+.deal-register-right h3 {
+    color: #000;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-size: 31px;
+    font-weight: 600;
+}
+  
+.deal-form-container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.deal-form-group {
+    margin-bottom: 1.5rem;
+}
+  
+.deal-form-group label {
+    display: block;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+  
+.deal-form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.deal-phone-group {
+    align-items: center;
+}
+  
+.deal-phone-input-container {
+    display: flex;
+}
+  
+.deal-country-code-input {
+    width: 20%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.deal-phone-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.deal-social-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+  
+.deal-social-input i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #3b5998; /* Default to Facebook blue */
+}
+  
+.deal-social-input i.fa-twitter {
+    color: #1da1f2;
+}
+  
+.deal-social-input i.fa-instagram {
+    color: #e4405f;
+}
+  
+.deal-social-input .deal-form-input {
+    width: 100%;
+}
+.fa_icons{
+    font-size: 20px;
+    margin-left: -20px;
+}
+.deal-form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.deal-upload-button {
+    padding: 11px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+}
+  
+.deal-upload-button:hover {
+    background-color: #0056b3;
+}
+  
+.deal-register-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+  
+.deal-register-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,112 @@
+/* Container */
+.MyRepo-container {
+    min-height: 100vh;
+    background-color: #f7fafc;
+    padding: 2rem;
+  }
+  
+  /* Header */
+  .MyRepo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .MyRepo-header-title {
+    font-size: 49px;
+    font-weight: bold;
+    color: #1a202c;
+    font-family: 'circular';
+  }
+  
+  .MyRepo-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* space-x-4 */
+  }
+  
+  .MyRepo-search-bar {
+    position: relative;
+  }
+  
+  .MyRepo-search-input {
+    padding: 9px 77px 9px 9px;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db;
+    outline: none;
+    transition: ring 0.2s;
+  }
+  
+  .MyRepo-search-input:focus {
+    ring: 2px solid #3b82f6; /* ring-blue-500 */
+  }
+  
+  .MyRepo-search-icon {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280; /* text-gray-500 */
+  }
+  
+  .MyRepo-search-button {
+    background-color: #3b82f6; /* bg-blue-500 */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem; /* rounded-md */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+  }
+  
+  .MyRepo-search-button:hover {
+    background-color: #2563eb; /* hover:bg-blue-600 */
+  }
+  
+  .MyRepo-newest-button {
+    display: flex;
+    align-items: center;
+    color: #4b5563; /* text-gray-700 */
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .MyRepo-newest-icon {
+    margin-right: 0.25rem; /* mr-1 */
+  }
+  
+  /* Content */
+  .MyRepo-content {
+    text-align: center;
+  }
+  
+  .MyRepo-content-text {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    font-size: 21px;
+    color: black;
+    text-align: left;
+
+  }
+  
+  .MyRepo-no-reports {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem; /* mt-16 */
+  }
+  
+  .MyRepo-no-reports-icon {
+    color: #f59e0b;
+    font-size: 1.7rem;
+    margin-bottom: 0rem;
+
+  }
+  
+  .MyRepo-no-reports-text {
+    font-size: 14px;
+    color: black;
+  }
+  
